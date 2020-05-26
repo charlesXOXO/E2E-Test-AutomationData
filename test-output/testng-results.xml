@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="50259" started-at="2020-05-24T15:06:36 EDT" finished-at="2020-05-24T15:07:26 EDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="50259" started-at="2020-05-24T15:06:36 EDT" finished-at="2020-05-24T15:07:26 EDT">
+      <class name="E2ETestCase.Route53">
+        <test-method status="PASS" signature="Route53_merge()[pri:0, instance:E2ETestCase.Route53@71bbf57e]" name="Route53_merge" is-config="true" duration-ms="35651" started-at="2020-05-24T15:06:36 EDT" finished-at="2020-05-24T15:07:11 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Route53_merge -->
+        <test-method status="PASS" signature="route53_create()[pri:0, instance:E2ETestCase.Route53@71bbf57e]" name="route53_create" duration-ms="10406" started-at="2020-05-24T15:07:11 EDT" finished-at="2020-05-24T15:07:22 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- route53_create -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:E2ETestCase.Route53@71bbf57e]" name="teardown" is-config="true" duration-ms="4134" started-at="2020-05-24T15:07:22 EDT" finished-at="2020-05-24T15:07:26 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- E2ETestCase.Route53 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
