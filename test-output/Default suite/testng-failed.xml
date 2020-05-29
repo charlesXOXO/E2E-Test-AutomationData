@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="E2ETestCase.S3CloudFront">
+      <class name="E2ETestCase.CloudFront">
         <methods>
           <include name="prerequisites"/>
-          <include name="S3Bucket_Creation"/>
+          <include name="CloudFront_Distirbution"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- E2ETestCase.S3CloudFront -->
+      </class> <!-- E2ETestCase.CloudFront -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

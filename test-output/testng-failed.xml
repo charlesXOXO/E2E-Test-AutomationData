@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="main.Listeners"/>
-  </listeners>
-  <test thread-count="5" name="S3(failed)">
-    <classes>
-      <class name="E2ETestCase.S3CloudFront">
-        <methods>
-          <include name="prerequisites"/>
-          <include name="S3Bucket_Creation"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- E2ETestCase.S3CloudFront -->
-    </classes>
-  </test> <!-- S3(failed) -->
-  <test thread-count="5" name="CloudFront(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="E2ETestCase.CloudFront">
         <methods>
@@ -25,5 +11,5 @@
         </methods>
       </class> <!-- E2ETestCase.CloudFront -->
     </classes>
-  </test> <!-- CloudFront(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

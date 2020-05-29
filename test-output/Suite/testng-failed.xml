@@ -4,17 +4,6 @@
   <listeners>
     <listener class-name="main.Listeners"/>
   </listeners>
-  <test thread-count="5" name="S3(failed)">
-    <classes>
-      <class name="E2ETestCase.S3CloudFront">
-        <methods>
-          <include name="prerequisites"/>
-          <include name="S3Bucket_Creation"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- E2ETestCase.S3CloudFront -->
-    </classes>
-  </test> <!-- S3(failed) -->
   <test thread-count="5" name="CloudFront(failed)">
     <classes>
       <class name="E2ETestCase.CloudFront">

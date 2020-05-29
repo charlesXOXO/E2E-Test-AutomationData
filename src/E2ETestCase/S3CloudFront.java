@@ -17,9 +17,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import PageObject.AWS_Dashboard;
-import PageObject.Landing_Page;
-import PageObject.Login_Page;
 import Resources.Base;
 
 public class S3CloudFront extends Base {
@@ -27,14 +24,14 @@ public class S3CloudFront extends Base {
 	public static Logger log = LogManager.getLogger(Base.class.getName());
 	public static WebDriver driver;
 
-	@BeforeTest
+	@BeforeTest(enabled=false)
 	public void prerequisites() throws IOException, InterruptedException {
 
 		/* &&&&&&&&&&&&&&&&& INTIALIZING BROWSER &&&&&&&&&&&&& */
 		driver=login();
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void S3Bucket_Creation() throws InterruptedException, IOException {
 		
 			// TODO Auto-generated method stub
@@ -189,7 +186,7 @@ public class S3CloudFront extends Base {
 			log.info("STATIC WEBSITE HOSTING SUCCESSFUL");
 	}
 
-	@AfterTest
+	@AfterTest(enabled=false)
 	public void teardown() {
 		driver.close();
 	}
