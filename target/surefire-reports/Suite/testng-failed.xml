@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" verbose="0">
+  <test parallel="none" name="CloudFront(failed)" preserve-order="true">
+    <classes>
+      <class name="E2ETestCase.CloudFront">
+        <methods>
+          <include name="prerequisites"/>
+          <include name="CloudFront_Distirbution"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- E2ETestCase.CloudFront -->
+      <class name="E2ETestCase.S3CloudFront">
+        <methods>
+          <include name="prerequisites"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- E2ETestCase.S3CloudFront -->
+    </classes>
+  </test> <!-- CloudFront(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import Resources.Base;
 
 public class Final_Browser extends Base{
+
 	@Test
 	public void intialize() throws IOException {
 		driver = intializeDriver();

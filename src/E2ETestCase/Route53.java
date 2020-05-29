@@ -1,47 +1,27 @@
 package E2ETestCase;
 
 import java.io.IOException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import PageObject.AWS_Dashboard;
-import PageObject.Landing_Page;
-import PageObject.Login_Page;
 import Resources.Base;
 
 public class Route53 extends Base {
 
-	
+	public static Logger log = LogManager.getLogger(Base.class.getName());
+	public static WebDriver driver;
 	@BeforeTest
 	public void Route53_merge() throws InterruptedException, IOException {
 
-		driver = intializeDriver();
-
-		Landing_Page Landing = new Landing_Page(driver);
-		Login_Page Login = new Login_Page(driver);
-		AWS_Dashboard Dropdown = new AWS_Dashboard(driver);
-		String Username = prop.getProperty("Username");
-		String Password = prop.getProperty("Password");
-		String Account_ID = prop.getProperty("Account_ID");
-		String URL = prop.getProperty("URL");
-
-		driver.get(URL);
-		Landing.get_login().click();
-
-		Login.ExistingUser().click();
-		Login.IAM_User().click();
-		Login.AccountID().sendKeys(Account_ID);
-		Login.Next_button().click();
-
-		// Enter the credentials to your IAM ROLE assinged by AWS Administrator
-
-		Login.Username().sendKeys(Username);
-		Login.Password().sendKeys(Password);
-		Login.SignIn().click();
-		Dropdown.Service_Dropdown().click();
+		driver = login();
 	}
 
 	@Test
